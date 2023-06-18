@@ -1,9 +1,9 @@
 import { Button, View } from "react-native";
 
-export function MyButton() {
+export function MyButton({ text }) {
   return (
     <View>
-      <Button title="Press me" onPress={() => {}} />
+      <Button title={text} onPress={() => {}} />
     </View>
   );
 }
