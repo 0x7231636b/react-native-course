@@ -1,19 +1,21 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Alert } from "react-native";
 import { MyButton } from "./components/MyButton";
+import React from "react";
 
 export default function App() {
-  let text = "This text need to change on button tap!";
+  const [counter, setCounter] = React.useState(0);
+
   return (
     <View style={styles.container}>
       <Text>Hello World!</Text>
       <MyButton
         text="press me"
         onPress={() => {
-          text = "New text";
+          setTimeout(() => setCounter((counter) => counter + 1), 1000);
         }}
       />
-      <Text>{text}</Text>
+      <Text>{counter}</Text>
       <StatusBar style="auto" />
     </View>
   );
