@@ -1,9 +1,13 @@
 import { Button, View } from "react-native";
 
-export function MyButton({ text }) {
+interface MyButtonProps {
+  text: string;
+}
+
+export function MyButton(props: MyButtonProps) {
   return (
     <View>
-      <Button title={text} onPress={() => {}} />
+      <Button title={props.text} onPress={() => {}} />
     </View>
   );
 }
