@@ -12,7 +12,7 @@ export default function App() {
       <MyButton
         text="press me"
         onPress={() => {
-          setCounter(counter + 1);
+          setTimeout(() => setCounter(counter + 1), 1000);
         }}
       />
       <Text>{counter}</Text>
