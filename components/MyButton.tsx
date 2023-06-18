@@ -8,7 +8,7 @@ interface MyButtonProps {
 export function MyButton(props: MyButtonProps) {
   return (
     <View>
-      <Button title={props.text} />
+      <Button title={props.text} onPress={props.onPress} />
     </View>
   );
 }
