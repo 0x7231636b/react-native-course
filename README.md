@@ -16,5 +16,7 @@ To see each lecture or content, the commits as well as the branch names should b
 - State management
   - Explanation with graphics
   - Store
+  - Reducer
+  - Middleware
   - Persistent store
   - Sagas
