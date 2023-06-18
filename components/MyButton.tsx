@@ -1,14 +1,14 @@
 import { Button, View } from "react-native";
 
 interface MyButtonProps {
-  text?: string;
+  children: string;
   onPress?: () => void;
 }
 
 export function MyButton(props: MyButtonProps) {
   return (
     <View>
-      <Button title={props.text} onPress={props.onPress} />
+      <Button title={props.children} onPress={props.onPress} />
     </View>
   );
 }
