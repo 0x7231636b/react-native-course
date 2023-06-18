@@ -4,9 +4,7 @@ import { MyButton } from "./components/MyButton";
 import React from "react";
 
 export default function App() {
-  const [textChangeLabel, setTextChangeLabel] = React.useState(
-    "This text need to change on button tap!"
-  );
+  const [counter, setCounter] = React.useState(0);
 
   return (
     <View style={styles.container}>
@@ -14,10 +12,10 @@ export default function App() {
       <MyButton
         text="press me"
         onPress={() => {
-          setTextChangeLabel("New text");
+          setCounter(counter + 1);
         }}
       />
-      <Text>{textChangeLabel}</Text>
+      <Text>{counter}</Text>
       <StatusBar style="auto" />
     </View>
   );
