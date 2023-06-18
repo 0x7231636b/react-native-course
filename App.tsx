@@ -3,15 +3,17 @@ import { StyleSheet, Text, View, Alert } from "react-native";
 import { MyButton } from "./components/MyButton";
 
 export default function App() {
+  let text = "This text need to change on button tap!";
   return (
     <View style={styles.container}>
       <Text>Hello World!</Text>
       <MyButton
         text="press me"
         onPress={() => {
-          alert("Button pressed");
+          text = "New text";
         }}
       />
+      <Text>{text}</Text>
       <StatusBar style="auto" />
     </View>
   );
