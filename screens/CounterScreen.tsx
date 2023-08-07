@@ -61,6 +61,7 @@ export default function CounterScreen({ navigation }) {
         }}
       />
       <Text>{counter}</Text>
+      <Text>Another text</Text>
       <StatusBar style="auto" />
     </View>
   );
