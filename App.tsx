@@ -6,6 +6,18 @@ import CounterScreen from "./screens/CounterScreen";
 
 const Stack = createNativeStackNavigator();
 
+// Color scheme created with: https://color.adobe.com/create/color-wheel
+// primary
+// #4FFF00
+// primary accent
+// #98E800
+// secondary
+// #FFFF00
+// secondary accent
+// #E8CF00
+// bonus
+// #FFCF0D
+
 export default function App() {
   // For screen navigation documentation see:
   // https://reactnative.dev/docs/navigation
