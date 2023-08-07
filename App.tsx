@@ -1,31 +1,20 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Alert } from "react-native";
-import { MyButton } from "./components/MyButton";
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./screens/HomeScreen";
+import CounterScreen from "./screens/CounterScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [counter, setCounter] = React.useState(0);
-
+  // For screen navigation documentation see:
+  // https://reactnative.dev/docs/navigation
   return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-      <MyButton
-        text="press me"
-        onPress={() => {
-          setTimeout(() => setCounter((counter) => counter + 1), 1000);
-        }}
-      />
-      <Text>{counter}</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Counter" component={CounterScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
