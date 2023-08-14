@@ -6,17 +6,19 @@ import CounterScreen from "./screens/CounterScreen";
 
 const Stack = createNativeStackNavigator();
 
+// Next Session:
+// Styling of all texts and Background
 // Color scheme created with: https://color.adobe.com/create/color-wheel
 // primary
-// #4FFF00
+// #BF00BF
 // primary accent
-// #98E800
+// #FF5CFF
+// primary accent 2
+// #CC00CC
 // secondary
-// #FFFF00
+// #FFFFFF
 // secondary accent
-// #E8CF00
-// bonus
-// #FFCF0D
+// #FFB2FF
 
 export default function App() {
   // For screen navigation documentation see:

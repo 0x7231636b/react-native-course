@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Alert } from "react-native";
+import { StyleSheet, Text, View, Alert, TouchableOpacity } from "react-native";
 import { MyButton } from "../components/MyButton";
 import React from "react";
+import styled from "styled-components";
 
 // react documentation for useEffect:
 // https://react.dev/reference/react/useEffect#useeffect
@@ -45,7 +46,9 @@ export default function CounterScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <MyButton text="go back" onPress={() => navigation.navigate("Home")} />
+      <SecondaryButton onPress={() => navigation.navigate("Home")}>
+        <ButtonText>go back</ButtonText>
+      </SecondaryButton>
       <MyButton
         text="counter++"
         onPress={() => {
@@ -66,6 +69,20 @@ export default function CounterScreen({ navigation }) {
     </View>
   );
 }
+
+const SecondaryButton = styled(TouchableOpacity)`
+  /* color: #bf00bf; */
+  background-color: #bf00bf;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin: 5px;
+  border-radius: 100px;
+`;
+
+const ButtonText = styled(Text)`
+  color: #fff;
+`;
 
 const styles = StyleSheet.create({
   container: {
